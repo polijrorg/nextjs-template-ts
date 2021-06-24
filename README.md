@@ -1,4 +1,4 @@
-# Next.js project template
+# Next.js project template with Material UI
 
 This is a NextJs template for initiate projects!
 
@@ -10,6 +10,7 @@ What is included?
 - Husky
 - Eslint
 - Prettier
+- Material UI
 
 ## How to use
 Clone this repositorie and run:
@@ -21,5 +22,3 @@ or
 To run this project use:
 
 `yarn dev`
-
-### Others Setups
