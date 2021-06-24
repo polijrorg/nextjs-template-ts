@@ -1,4 +1,4 @@
-# Next.js project template with Material UI
+# ✨ NextJS project template with Material UI
 
 This is a NextJs template for initiate projects!
 
@@ -12,8 +12,8 @@ What is included?
 - Prettier
 - Material UI
 
-## How to use
-Clone this repositorie and run:
+## 🧿 How to use
+Clone this repository and run :
 
 `yarn install`
 or
@@ -22,3 +22,9 @@ or
 To run this project use:
 
 `yarn dev`
+
+Or use as template when creating your new repository
+
+### 📕 Storybook 
+
+To run storybook use: `yarn storybook`
