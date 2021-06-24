@@ -22,4 +22,8 @@ To run this project use:
 
 `yarn dev`
 
-### Others Setups
+## Other Setups
+
+This template has others configurations that use the main branch as base, to access it just go for the branch that implements what you need and use as template when creating your repository.
+
+- MaterialUI = branch: `feat/MaterialUI`
