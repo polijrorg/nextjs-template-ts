@@ -1,4 +1,4 @@
-# Next.js project template
+# ✨ NextJS project template
 
 This is a NextJs template for initiate projects!
 
@@ -11,8 +11,8 @@ What is included?
 - Eslint
 - Prettier
 
-## How to use
-Clone this repositorie and run:
+## 🧿 How to use
+Clone this repository and run :
 
 `yarn install`
 or
@@ -22,7 +22,13 @@ To run this project use:
 
 `yarn dev`
 
-## Other Setups
+Or use as template when creating your new repository
+
+### 📕 Storybook 
+
+To run storybook use: `yarn storybook`
+
+## 🕹 Other Setups
 
 This template has others configurations that use the main branch as base, to access it just go for the branch that implements what you need and use as template when creating your repository.
 
