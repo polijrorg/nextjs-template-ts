@@ -24,12 +24,12 @@ To run this project use:
 
 Or use as template when creating your new repository
 
-### 📕 Storybook 
+### 📕 Storybook
 
 To run storybook use: `yarn storybook`
 
 ## 🕹 Other Setups
 
-This template has others configurations that use the main branch as base, to access it just go for the branch that implements what you need and use as template when creating your repository.
+This template has others configurations that use the main branch as base, to access it just go for the branch that implements what you need and use as template when creating your repository or clone it.
 
 - MaterialUI = branch: `feat/MaterialUI`
