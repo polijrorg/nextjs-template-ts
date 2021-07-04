@@ -1,4 +1,4 @@
-import theme from 'styles/default.theme';
+import { theme } from 'styles/default.theme';
 
 type Theme = typeof theme;
 
