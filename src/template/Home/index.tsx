@@ -1,3 +1,4 @@
+import Test from 'components/TestComponent';
 import * as S from './styles';
 
 const HomeTemplate = () => (
@@ -6,6 +7,7 @@ const HomeTemplate = () => (
             Esse template foi criado pela equipe de Research 21.1 para projetos
             internos da Polijunior.
         </S.Title>
+        <Test title="Esse componente é um teste" />
     </S.Container>
 );
 export default HomeTemplate;
