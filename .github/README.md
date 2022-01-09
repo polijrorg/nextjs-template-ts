@@ -40,4 +40,4 @@ To run storybook use: `yarn storybook`
 This template has others configurations that use the main branch as base, to access it just go for the branch that implements what you need and use as template when creating your repository or clone it.
 
 - MaterialUI = branch: `feat/MaterialUI`
-- Next 12 + ReactQuery = branch: `feat/next12` 
+- Next 12 + ReactQuery = branch: `feat/next12` ( This will be the main branch after some tests )
