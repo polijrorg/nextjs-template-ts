@@ -24,10 +24,10 @@ To run this project use:
 
 `yarn dev`
 
-To run the test use:
+To run tests use:
 `yarn test`
 Or to run in watch mode:
-`yarn run:watch`
+`yarn test:watch`
 
 Or use as template when creating your new repository
 
