@@ -10,9 +10,11 @@ What is included?
 - Husky
 - Eslint
 - Prettier
+- Jest
+- React-Testing Library
 
 ## 🧿 How to use
-Clone this repository and run :
+Use this repository as template for your project and run:
 
 `yarn install`
 or
@@ -21,6 +23,11 @@ or
 To run this project use:
 
 `yarn dev`
+
+To run the test use:
+`yarn test`
+Or to run in watch mode:
+`yarn run:watch`
 
 Or use as template when creating your new repository
 
@@ -33,3 +40,4 @@ To run storybook use: `yarn storybook`
 This template has others configurations that use the main branch as base, to access it just go for the branch that implements what you need and use as template when creating your repository or clone it.
 
 - MaterialUI = branch: `feat/MaterialUI`
+- Next 12 + ReactQuery = branch: `feat/next12` 
