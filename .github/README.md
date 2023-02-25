@@ -12,6 +12,9 @@ What is included?
 - Prettier
 - Jest
 - React-Testing Library
+- Radix
+- Stitches
+- Chromatic
 
 ## 🧿 How to use
 Use this repository as template for your project and run:

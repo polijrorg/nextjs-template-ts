@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../src/styles';
-import { theme } from '../src/styles/default.theme';
+import { defaultTheme } from '../src/styles/default.theme';
 import * as nextImage from 'next/image';
 
 Object.defineProperty(nextImage, 'default', {
@@ -10,7 +10,7 @@ Object.defineProperty(nextImage, 'default', {
 
 export const decorators = [
     (Story) => (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={defaultTheme}>
             <GlobalStyles />
             <Story />
         </ThemeProvider>
