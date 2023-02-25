@@ -7,11 +7,11 @@
         "start": "next start",
         "test": "jest",
         "test:watch": "jest --watch",
-        "storybook": "start-storybook NODE_OPTIONS=--openssl-legacy-provider -p 6006",
+        "storybook": "start-storybook -p 6006",
         "lint": "eslint src --max-warnings=0",
         "prepare": "husky install",
-        "build-storybook": "build-storybook NODE_OPTIONS=--openssl-legacy-provider",
-        "chromatic": "chromatic NODE_OPTIONS=--openssl-legacy-provider"
+        "build-storybook": "build-storybook",
+        "chromatic": "chromatic"
     },
     "lint-staged": {
         "*.ts(x)?": [
@@ -28,7 +28,8 @@
         "nookies": "^2.5.2",
         "react": "^16.13.0",
         "react-dom": "^16.13.0",
-        "styled-components": "^5.0.0"
+        "styled-components": "^5.0.0",
+        "webpack": "^5.75.0"
     },
     "devDependencies": {
         "@babel/core": "^7.14.6",
