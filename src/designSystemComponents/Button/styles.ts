@@ -11,7 +11,7 @@ export const Button = styled.button<StyleProps>`
                 variants: {
                     variant: {
                         filled: css`
-                            color: ${theme.color('secondary', 'main')};
+                            color: ${theme.color('primary', 'main')};
                             background: ${theme.color('secondary', 'main')};
                             border: 1px solid
                                 ${theme.color('secondary', 'main')};
