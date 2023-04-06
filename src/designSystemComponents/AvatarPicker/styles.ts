@@ -109,16 +109,16 @@ export const Icon = styled.img<Pick<StyleProps, 'size'>>`
                 variants: {
                     size: {
                         small: css`
+                            width: 16px;
+                            height: 16px;
+                        `,
+                        medium: css`
                             width: 20px;
                             height: 20px;
                         `,
-                        medium: css`
+                        large: css`
                             width: 24px;
                             height: 24px;
-                        `,
-                        large: css`
-                            width: 28px;
-                            height: 28px;
                         `
                     }
                 },

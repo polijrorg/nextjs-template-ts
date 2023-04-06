@@ -22,7 +22,7 @@ const HomeTemplate = () => {
                 file={file}
                 setFile={setFile}
             />
-            <AvatarPicker setFile={setFile} file={file} />
+            <AvatarPicker setFile={setFile} file={file} size="small" />
             <Test title="Esse componente é um teste" />
         </S.Container>
     );
