@@ -48,6 +48,7 @@ const AvatarPicker: React.FC<ComponentProps> = ({
                 {!lable && (
                     <S.IconWrapper
                         size={size}
+                        color={color}
                         onClick={() => inputRef.current?.click()}
                     >
                         <S.Icon src={iconSrc} size={size} />
