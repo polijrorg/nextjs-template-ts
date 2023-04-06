@@ -1,21 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FileInput from './index';
+import AvatarPicker from './index';
 
 export default {
-    title: 'FileInput',
-    component: FileInput
-} as ComponentMeta<typeof FileInput>;
+    title: 'AvatarPicker',
+    component: AvatarPicker
+} as ComponentMeta<typeof AvatarPicker>;
 
-export const Primary: ComponentStory<typeof FileInput> = (args) => (
-    <FileInput {...args} />
-);
-
-Primary.args = {
-    borderRadius: true,
-    color: 'rgb(255, 157, 0)',
-    size: 'small',
-    icon: 'img',
-    iconSize: 'small'
+export const Primary: ComponentStory<typeof AvatarPicker> = (args) => {
+    const [file, setFile] = useState<File>();
+    return <AvatarPicker {...args} file={file} setFile={setFile} />;
 };
