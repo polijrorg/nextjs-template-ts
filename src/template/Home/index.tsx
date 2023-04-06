@@ -1,5 +1,6 @@
 import Test from 'components/TestComponent';
 import FileInput from 'designSystemComponents/FileInput';
+import AvatarPicker from 'designSystemComponents/AvatarPicker';
 import { useState } from 'react';
 
 import * as S from './styles';
@@ -21,6 +22,7 @@ const HomeTemplate = () => {
                 file={file}
                 setFile={setFile}
             />
+            <AvatarPicker setFile={setFile} file={file} />
             <Test title="Esse componente é um teste" />
         </S.Container>
     );
