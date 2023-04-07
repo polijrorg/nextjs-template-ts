@@ -7,12 +7,16 @@ interface AnimatedProps {
     ascend: boolean;
 }
 
+interface IconProps extends StyledProps {
+    visible: boolean;
+}
+
 type AnimatedAndStyledProps = AnimatedProps & StyledProps;
 
 const labelAscend = keyframes`
     from { 
         font-size: 16px;
-        margin-top: 22px;
+        margin-top: 20px;
      }
     to { 
         font-size: 12px;
@@ -30,7 +34,7 @@ const labelDescend = keyframes`
      }
     to { 
         font-size: 16px;
-        margin-top: 22px;
+        margin-top: 20px;
      }
 `;
 
@@ -120,7 +124,7 @@ export const LabelContainer = styled.div<AnimatedAndStyledProps>`
     width: fit-content;
     margin-left: 8px;
     padding: 0px 4px;
-    ${({ height, ascend, variant }) =>
+    ${({ height, ascend, variant, startAdornment }) =>
         createVariants(
             {
                 variants: {
@@ -138,6 +142,11 @@ export const LabelContainer = styled.div<AnimatedAndStyledProps>`
                         standard: css`
                             background-color: none;
                             margin-left: 0px;
+                        `
+                    },
+                    startAdornment: {
+                        true: css`
+                            margin-left: 28px;
                         `
                     }
                 },
@@ -204,7 +213,7 @@ export const LabelContainer = styled.div<AnimatedAndStyledProps>`
                     }
                 ]
             },
-            { height, ascend, variant }
+            { height, ascend, variant, startAdornment }
         )};
 `;
 
@@ -220,7 +229,7 @@ export const Input = styled.input<StyledProps>`
     overflow: hidden;
     margin-top: 6px;
 
-    ${({ height, variant }) =>
+    ${({ height, variant, startAdornment }) =>
         createVariants(
             {
                 variants: {
@@ -256,6 +265,11 @@ export const Input = styled.input<StyledProps>`
                             }
                             padding: 20px 4px 6px;
                         `
+                    },
+                    startAdornment: {
+                        true: css`
+                            padding-left: 32px;
+                        `
                     }
                 },
                 compoundVariants: [
@@ -275,6 +289,29 @@ export const Input = styled.input<StyledProps>`
                     }
                 ]
             },
-            { height, variant }
+            { height, variant, startAdornment }
         )};
+`;
+
+export const Icon = styled.img<IconProps>`
+    display: ${({ visible }) => (visible ? 'flex' : 'none')};
+    height: 32px;
+    position: absolute;
+    padding: 8px;
+    margin-top: 14px;
+
+    ${({ height }) =>
+        createVariants(
+            {
+                variants: {
+                    height: {
+                        small: css`
+                            margin-top: 8px;
+                        `
+                    }
+                },
+                compoundVariants: []
+            },
+            { height }
+        )}
 `;

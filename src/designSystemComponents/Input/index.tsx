@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import * as S from './styles';
 
 export interface StyledProps {
-    height: 'small' | 'normal';
-    variant: 'outlined' | 'filled' | 'standard';
+    height?: 'small' | 'normal';
+    variant?: 'outlined' | 'filled' | 'standard';
+    startAdornment?: boolean;
 }
 
 interface ComponentProps extends StyledProps {
@@ -13,7 +14,8 @@ interface ComponentProps extends StyledProps {
 const Input: React.FC<ComponentProps> = ({
     height = 'normal',
     label,
-    variant = 'outlined'
+    variant = 'outlined',
+    startAdornment = false
 }) => {
     const [ascend, setAscend] = useState<boolean>(false);
     const [text, setText] = useState<string>('');
@@ -28,12 +30,23 @@ const Input: React.FC<ComponentProps> = ({
 
     return (
         <S.Container>
-            <S.LabelContainer ascend={ascend} height={height} variant={variant}>
+            <S.Icon
+                src="/assets/test-icon.svg"
+                visible={startAdornment}
+                height={height}
+            />
+            <S.LabelContainer
+                ascend={ascend}
+                height={height}
+                variant={variant}
+                startAdornment={startAdornment}
+            >
                 <S.Label ascend={ascend}>{label}</S.Label>
             </S.LabelContainer>
             <S.Input
                 variant={variant}
                 height={height}
+                startAdornment={startAdornment}
                 onFocus={handleAscend}
                 onBlur={handleDescend}
                 onChange={(newText) => setText(newText.target.value)}
