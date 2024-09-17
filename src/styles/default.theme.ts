@@ -9,6 +9,10 @@ export const defaultTheme = {
             light: 'hsl(174, 96%, 78%)',
             main: 'hsl(180, 77%, 47%)',
             dark: 'hsl(186, 91%, 29%)'
+        },
+        util: {
+            light: '#FFFFFF',
+            dark: '#000000'
         }
     },
     space: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 192, 256],
