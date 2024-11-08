@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import HomeTemplate from 'template/Home';
+import CadastroTemplate from 'template/Cadastro';
 
 const Home: NextPage = () => {
-    return <HomeTemplate />;
+    return <CadastroTemplate />;
 };
 
 export default Home;
