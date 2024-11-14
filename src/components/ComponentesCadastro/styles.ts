@@ -25,8 +25,8 @@ export const ContagemPassos = styled.div`
     }
 `;
 
-export const Passo = styled.h1`
-    display: flex;
+export const Passo1 = styled.h1`
+    display: none;
     align-items: center;
     justify-content: center;
     height: 6%;
@@ -38,9 +38,58 @@ export const Passo = styled.h1`
     font-family: 'Open sans', sans-serif;
 `;
 
-// Login Box começa aqui
+export const Passo2 = styled.h1`
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 6%;
+    font-size: 4vh;
+    color: rgba(250, 250, 250, 1);
+    width: 6vh;
+    background-color: rgba(57, 44, 114, 1);
+    border-radius: 3vh;
+    font-family: 'Open sans', sans-serif;
+`;
+export const Passo3 = styled.h1`
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 6%;
+    font-size: 4vh;
+    color: rgba(250, 250, 250, 1);
+    width: 6vh;
+    background-color: rgba(57, 44, 114, 1);
+    border-radius: 3vh;
+    font-family: 'Open sans', sans-serif;
+`;
+export const Passo4 = styled.h1`
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 6%;
+    font-size: 4vh;
+    color: rgba(250, 250, 250, 1);
+    width: 6vh;
+    background-color: rgba(57, 44, 114, 1);
+    border-radius: 3vh;
+    font-family: 'Open sans', sans-serif;
+`;
+export const Passo5 = styled.h1`
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 6%;
+    font-size: 4vh;
+    color: rgba(250, 250, 250, 1);
+    width: 6vh;
+    background-color: rgba(57, 44, 114, 1);
+    border-radius: 3vh;
+    font-family: 'Open sans', sans-serif;
+`;
 
-export const Box = styled.div`
+// Cadastro Box começa aqui
+
+export const Box1 = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -69,10 +118,9 @@ export const BemVindoCadastro = styled.h1`
 
 export const CpfArea = styled.input`
     height: 8vh;
-    border: 1px solid;
-    border-radius: 2vh;
+    border: none;
+    border-bottom: 1px solid rgba(57, 44, 114, 1);
     padding-left: 1vw;
-    border-color: rgba(57, 44, 114, 1);
     outline: none;
     font-size: 3vh;
     margin: 1vh;
@@ -85,10 +133,9 @@ export const CpfArea = styled.input`
 
 export const SenhaArea = styled.input`
     height: 8vh;
-    border: 1px solid;
-    border-radius: 2vh;
+    border: none;
+    border-bottom: 1px solid rgba(57, 44, 114, 1);
     padding-left: 1vw;
-    border-color: rgba(57, 44, 114, 1);
     outline: none;
     font-size: 3vh;
     margin: 1vh;
@@ -101,10 +148,9 @@ export const SenhaArea = styled.input`
 
 export const ConfirmaSenhaArea = styled.input`
     height: 8vh;
-    border: 1px solid;
-    border-radius: 2vh;
+    border: none;
+    border-bottom: 1px solid rgba(57, 44, 114, 1);
     padding-left: 1vw;
-    border-color: rgba(57, 44, 114, 1);
     outline: none;
     font-size: 3vh;
     margin: 1vh;
