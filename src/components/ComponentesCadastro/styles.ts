@@ -105,6 +105,8 @@ export const Box1 = styled.div`
     }
 `;
 
+// perguntas 1
+
 export const BemVindoCadastro = styled.h1`
     font-family: 'Open sans', sans-serif;
     width: max-content;
@@ -126,6 +128,7 @@ export const CpfArea = styled.input`
     margin: 1vh;
     width: 50vw;
     color: rgba(57, 44, 114, 1);
+    background-color: rgba(250, 250, 250, 1);
     ::-webkit-input-placeholder {
         color: rgba(57, 44, 114, 1);
     }
@@ -141,6 +144,7 @@ export const SenhaArea = styled.input`
     margin: 1vh;
     width: 50vw;
     color: rgba(57, 44, 114, 1);
+    background-color: rgba(250, 250, 250, 1);
     ::-webkit-input-placeholder {
         color: rgba(57, 44, 114, 1);
     }
@@ -156,10 +160,106 @@ export const ConfirmaSenhaArea = styled.input`
     margin: 1vh;
     width: 50vw;
     color: rgba(57, 44, 114, 1);
+    background-color: rgba(250, 250, 250, 1);
     ::-webkit-input-placeholder {
         color: rgba(57, 44, 114, 1);
     }
 `;
+
+// perguntas 2
+
+export const NomeTexto = styled.h1`
+    display: none;
+    font-family: 'Open sans', sans-serif;
+    width: max-content;
+    height: 8vh;
+    font-size: 8vh;
+    font-weight: bolder;
+    margin-bottom: 5vh;
+    color: rgba(57, 44, 114, 1);
+    user-select: none;
+`;
+
+export const NomeArea = styled.input`
+    display: none;
+    height: 8vh;
+    border: none;
+    border-bottom: 1px solid rgba(57, 44, 114, 1);
+    padding-left: 1vw;
+    outline: none;
+    font-size: 3vh;
+    margin: 1vh;
+    width: 50vw;
+    color: rgba(57, 44, 114, 1);
+    background-color: rgba(250, 250, 250, 1);
+    ::-webkit-input-placeholder {
+        color: rgba(57, 44, 114, 1);
+    }
+`;
+
+export const GeneroTexto = styled.h1`
+    display: none;
+    font-family: 'Open sans', sans-serif;
+    width: max-content;
+    height: 6vh;
+    font-size: 6vh;
+    font-weight: bold;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+    color: rgba(57, 44, 114, 1);
+    user-select: none;
+`;
+
+export const BoxGeneroCheckBox = styled.div`
+    display: none;
+    flex-direction: column;
+    height: 25vh;
+    position: relative;
+    width: 60vw;
+    align-items: start;
+    justify-content: center;
+`;
+
+export const DivCheckBox = styled.div`
+    display: none;
+    flex-direction: row;
+    height: 30vh;
+    position: relative;
+    width: 20vw;
+    align-items: center;
+    justify-content: stretch;
+`;
+
+export const GeneroCheckBoxArea = styled.input`
+    display: none;
+    height: 6vh;
+    outline: none;
+    margin: 1vh;
+    margin-left: 1vw;
+    width: 6vw;
+    color: rgba(57, 44, 114, 1);
+    background-color: rgba(250, 250, 250, 1);
+    ::-webkit-input-placeholder {
+        color: rgba(57, 44, 114, 1);
+    }
+`;
+
+export const CheckBoxTexto = styled.p`
+    display: none;
+    font-family: 'Open sans', sans-serif;
+    width: max-content;
+    height: 4vh;
+    font-size: 4vh;
+    font-weight: bold;
+    color: rgba(57, 44, 114, 1);
+    user-select: none;
+`;
+
+// perguntas 3
+
+// perguntas 4
+
+// perguntas 5
 
 export const SetaProximoDiv = styled.div`
     width: 10vw;
