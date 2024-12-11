@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import CadastroTemplate from 'template/Cadastro';
+import HomeTemplate from 'template/Home';
 
-const Home: NextPage = () => {
-    return <CadastroTemplate />;
+const HomePage: NextPage = () => {
+    return <HomeTemplate />;
 };
 
-export default Home;
+export default HomePage;

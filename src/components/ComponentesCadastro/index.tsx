@@ -9,41 +9,44 @@ export const TelasCadastro: React.FC = () => {
     const [styles3, setStyles3] = useState({});
     const [styles4, setStyles4] = useState({});
     const [styles5, setStyles5] = useState({});
+    const [perguntas1, setPerguntas1] = useState({});
+    const [perguntas2, setPerguntas2] = useState({});
+    const [perguntas3, setPerguntas3] = useState({});
+
     const [CPFvalue, setCPFValue] = useState('');
     const [Senhavalue, setSenhaValue] = useState('');
     const [ConfirmaSenhavalue, setConfirmaSenhaValue] = useState('');
-    const [perguntas1, setPerguntas1] = useState({});
-    const [perguntas2, setPerguntas2] = useState({});
+    const [Nomevalue, setNomeValue] = useState('');
+    const [Generovalue, setGeneroValue] = useState('');
 
     const Click = () => {
-        setCount(count + 1);
         setStyles1((prevStyles) => ({
             ...prevStyles,
-            display: count <= -1 ? 'none' : 'flex',
+            display: count < 0 ? 'none' : 'flex',
             backgroundColor:
                 count === 0 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
         }));
         setStyles2((prevStyles) => ({
             ...prevStyles,
-            display: count <= 0 ? 'none' : 'flex',
+            display: count < 1 ? 'none' : 'flex',
             backgroundColor:
                 count === 1 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
         }));
         setStyles3((prevStyles) => ({
             ...prevStyles,
-            display: count <= 1 ? 'none' : 'flex',
+            display: count < 2 ? 'none' : 'flex',
             backgroundColor:
                 count === 2 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
         }));
         setStyles4((prevStyles) => ({
             ...prevStyles,
-            display: count <= 2 ? 'none' : 'flex',
+            display: count < 3 ? 'none' : 'flex',
             backgroundColor:
                 count === 3 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
         }));
         setStyles5((prevStyles) => ({
             ...prevStyles,
-            display: count <= 3 ? 'none' : 'flex',
+            display: count < 4 ? 'none' : 'flex',
             backgroundColor:
                 count === 4 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
         }));
@@ -55,6 +58,11 @@ export const TelasCadastro: React.FC = () => {
             ...prevStyles,
             display: count !== 0 ? 'none' : 'flex'
         }));
+        setPerguntas3((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 1 ? 'none' : 'flex'
+        }));
+        setCount(count + 1);
     };
 
     const CPFInputChange = (e: {
@@ -71,6 +79,20 @@ export const TelasCadastro: React.FC = () => {
         target: { value: React.SetStateAction<string> };
     }) => {
         setConfirmaSenhaValue(e.target.value);
+    };
+    const NomeInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setNomeValue(e.target.value);
+    };
+    const MasculinoCheckBoxChange = () => {
+        setGeneroValue('masculino');
+    };
+    const FemininoCheckBoxChange = () => {
+        setGeneroValue('feminino');
+    };
+    const OutroGeneroCheckBoxChange = () => {
+        setGeneroValue('outrogenero');
     };
 
     return (
@@ -93,6 +115,7 @@ export const TelasCadastro: React.FC = () => {
                     placeholder="CPF"
                     value={CPFvalue}
                     onChange={CPFInputChange}
+                    type="number"
                 />
                 <S.SenhaArea
                     style={perguntas1}
@@ -115,8 +138,8 @@ export const TelasCadastro: React.FC = () => {
                 <S.NomeArea
                     style={perguntas2}
                     placeholder="Digite seu nome aqui"
-                    /* value={Nomevalue} */
-                    onChange={SenhaInputChange}
+                    value={Nomevalue}
+                    onChange={NomeInputChange}
                 />
                 <S.GeneroTexto style={perguntas2}>
                     Qual o seu gênero?
@@ -126,8 +149,8 @@ export const TelasCadastro: React.FC = () => {
                         <S.GeneroCheckBoxArea
                             style={perguntas2}
                             type="checkbox"
-                            /* value={Maculinovalue} */
-                            onChange={SenhaInputChange}
+                            checked={Generovalue === 'masculino'}
+                            onChange={MasculinoCheckBoxChange}
                         />
                         <S.CheckBoxTexto style={perguntas2}>
                             Masculino
@@ -137,8 +160,8 @@ export const TelasCadastro: React.FC = () => {
                         <S.GeneroCheckBoxArea
                             style={perguntas2}
                             type="checkbox"
-                            /* value={Femininovalue} */
-                            onChange={SenhaInputChange}
+                            checked={Generovalue === 'feminino'}
+                            onChange={FemininoCheckBoxChange}
                         />
                         <S.CheckBoxTexto style={perguntas2}>
                             Feminino
@@ -148,8 +171,8 @@ export const TelasCadastro: React.FC = () => {
                         <S.GeneroCheckBoxArea
                             style={perguntas2}
                             type="checkbox"
-                            /* value={OutroGenerovalue} */
-                            onChange={SenhaInputChange}
+                            checked={Generovalue === 'outrogenero'}
+                            onChange={OutroGeneroCheckBoxChange}
                         />
                         <S.CheckBoxTexto style={perguntas2}>
                             Outro
@@ -159,13 +182,39 @@ export const TelasCadastro: React.FC = () => {
 
                 {/* perguntas 3 */}
 
+                <S.IdentificacaoTexto style={perguntas3}>
+                    Qual sua principal identificação?
+                </S.IdentificacaoTexto>
+                <S.MainDivIdentificacaoCheckBox style={perguntas3}>
+                    <S.DivIdentificacaoCheckBox style={perguntas3}>
+                        <S.IdentificacaoCheckBoxArea
+                            style={perguntas3}
+                            type="checkbox"
+                            checked={false}
+                            onChange={OutroGeneroCheckBoxChange}
+                        />
+                        <S.CheckBoxTexto style={perguntas3}>
+                            CPF
+                        </S.CheckBoxTexto>
+                        <S.IdentificacaoCheckBoxArea
+                            style={perguntas3}
+                            type="checkbox"
+                            checked={false}
+                            onChange={OutroGeneroCheckBoxChange}
+                        />
+                        <S.CheckBoxTexto style={perguntas3}>
+                            CNPJ
+                        </S.CheckBoxTexto>
+                    </S.DivIdentificacaoCheckBox>
+                </S.MainDivIdentificacaoCheckBox>
+
                 {/* perguntas 4 */}
 
                 {/* perguntas 5 */}
             </S.Box1>
             <S.SetaProximoDiv>
                 <S.SetaProximo onClick={Click}>
-                    <img src="public\Downloads\Seta.png" alt="SetaProximo" />
+                    <S.Img3 src="/Downloads/Seta.png" alt="SetaProximo" />
                 </S.SetaProximo>
             </S.SetaProximoDiv>
         </S.MainDiv>

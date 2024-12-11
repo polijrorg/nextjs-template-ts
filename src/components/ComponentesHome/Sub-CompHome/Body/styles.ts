@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const MainDiv = styled.div`
     background-color: rgba(250, 250, 250, 1);
-    display: flex;
-    height: 100%;
+    height: 150vh;
     width: 100%;
 `;
 

@@ -1,8 +1,9 @@
-export interface User {
+export interface Lawyer {
     name: string;
     password: string;
     gender: string;
-    cpf: string;
+    cnpj: string;
+    company: string;
     phone: string;
     email: string;
     cep: string;
@@ -12,9 +13,11 @@ export interface User {
     complement: string;
     numberHouse: string;
     neighborhood: string;
+    servicetext: string;
+    actingtext: string;
 }
 
-export interface LoginUser {
-    cpf: string;
+export interface LoginLawyer {
+    cnpj: string;
     password: string;
 }

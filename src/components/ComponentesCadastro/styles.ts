@@ -257,6 +257,52 @@ export const CheckBoxTexto = styled.p`
 
 // perguntas 3
 
+export const IdentificacaoTexto = styled.h1`
+    display: none;
+    font-family: 'Open sans', sans-serif;
+    width: max-content;
+    height: 8vh;
+    font-size: 8vh;
+    font-weight: bolder;
+    margin-bottom: 5vh;
+    color: rgba(57, 44, 114, 1);
+    user-select: none;
+`;
+
+export const MainDivIdentificacaoCheckBox = styled.div`
+    display: none;
+    flex-direction: row;
+    height: 10vh;
+    position: relative;
+    width: 60vw;
+    align-items: center;
+    justify-content: stretch;
+`;
+
+export const DivIdentificacaoCheckBox = styled.div`
+    display: none;
+    flex-direction: row;
+    height: 30vh;
+    position: relative;
+    width: 20vw;
+    align-items: center;
+    justify-content: stretch;
+`;
+
+export const IdentificacaoCheckBoxArea = styled.input`
+    display: none;
+    height: 6vh;
+    outline: none;
+    margin: 1vh;
+    margin-left: 1vw;
+    width: 6vw;
+    color: rgba(57, 44, 114, 1);
+    background-color: rgba(250, 250, 250, 1);
+    ::-webkit-input-placeholder {
+        color: rgba(57, 44, 114, 1);
+    }
+`;
+
 // perguntas 4
 
 // perguntas 5
@@ -281,4 +327,10 @@ export const SetaProximo = styled.button`
     border: 0px solid;
     outline: none;
     cursor: pointer;
+`;
+
+export const Img3 = styled.img`
+    position: relative;
+    height: 8vh;
+    -webkit-user-drag: none;
 `;
