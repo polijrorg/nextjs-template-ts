@@ -12,7 +12,14 @@ export default class UserService {
         return response.data;
     }
 
-    static async Login(data: User.LoginUser): Promise<User.User> {
+    static async LoginUser(data: User.LoginUser): Promise<User.User> {
+        const response = await api.post('/users/login', data);
+        setCookie(undefined, '@app:token', response.data.token);
+        setCookie(undefined, '@app:useId', response.data.user.name);
+        return response.data;
+    }
+
+    static async UpdateUser(data: User.UpdateUser): Promise<User.User> {
         const response = await api.post('/users/login', data);
         setCookie(undefined, '@app:token', response.data.token);
         setCookie(undefined, '@app:useId', response.data.user.name);
@@ -21,13 +28,20 @@ export default class UserService {
 
     // Login e Cadastro de Advogados
 
-    static async createLayer(data: Lawyer.Lawyer): Promise<Lawyer.Lawyer> {
-        const response = await api.post('/users/register', data);
+    static async createLawyer(data: Lawyer.Lawyer): Promise<Lawyer.Lawyer> {
+        const response = await api.post('/lawyers/register', data);
         return response.data;
     }
 
-    static async LoginLayer(data: Lawyer.LoginLawyer): Promise<Lawyer.Lawyer> {
-        const response = await api.post('/users/login', data);
+    static async LoginLawyer(data: Lawyer.LoginLawyer): Promise<Lawyer.Lawyer> {
+        const response = await api.post('/lawyers/login', data);
+        setCookie(undefined, '@app:token', response.data.token);
+        setCookie(undefined, '@app:useId', response.data.user.name);
+        return response.data;
+    }
+
+    static async GetLawyers(): Promise<Lawyer.Lawyer> {
+        const response = await api.get('/lawyers/ReadAll');
         setCookie(undefined, '@app:token', response.data.token);
         setCookie(undefined, '@app:useId', response.data.user.name);
         return response.data;

@@ -9,16 +9,34 @@ export const MainHeader: React.FC = () => {
             <S.MainImageDiv>
                 <S.LogoButton
                     onClick={() => {
-                        Router.push('');
+                        Router.push('/');
                     }}
                 >
                     <S.Img1 src="\Downloads\LogoImage.png" />
                 </S.LogoButton>
             </S.MainImageDiv>
             <S.MainButtons>
-                <S.Button>Início</S.Button>
-                <S.Button>Advogados</S.Button>
-                <S.Button>Orçamentos</S.Button>
+                <S.Button
+                    onClick={() => {
+                        Router.push('/');
+                    }}
+                >
+                    Início
+                </S.Button>
+                <S.Button
+                    onClick={() => {
+                        Router.push('/Advogados');
+                    }}
+                >
+                    Advogados
+                </S.Button>
+                <S.Button
+                    onClick={() => {
+                        Router.push('/Orcamentos');
+                    }}
+                >
+                    Orçamentos
+                </S.Button>
                 <S.Button>Blog</S.Button>
             </S.MainButtons>
             <S.AdvogadoParceiroButton>

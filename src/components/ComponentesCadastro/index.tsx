@@ -12,12 +12,28 @@ export const TelasCadastro: React.FC = () => {
     const [perguntas1, setPerguntas1] = useState({});
     const [perguntas2, setPerguntas2] = useState({});
     const [perguntas3, setPerguntas3] = useState({});
+    const [perguntas4, setPerguntas4] = useState({});
+    const [perguntas5, setPerguntas5] = useState({});
+    const [perguntas6, setPerguntas6] = useState({});
 
     const [CPFvalue, setCPFValue] = useState('');
     const [Senhavalue, setSenhaValue] = useState('');
     const [ConfirmaSenhavalue, setConfirmaSenhaValue] = useState('');
     const [Nomevalue, setNomeValue] = useState('');
     const [Generovalue, setGeneroValue] = useState('');
+    const [Identificacaovalue, setIdentificacaoValue] = useState('');
+    const [IdentificacaoTextvalue, setIdentificacaoTextValue] = useState('');
+    const [ContatoTextvalue, setContatoTextValue] = useState('');
+    const [CEPTextvalue, setCEPTextValue] = useState('');
+    const [EstadoTextvalue, setEstadoTextValue] = useState('');
+    const [CidadeTextvalue, setCidadeTextValue] = useState('');
+    const [BairroTextvalue, setBairroTextValue] = useState('');
+    const [EnderecoTextvalue, setEnderecoTextValue] = useState('');
+    const [NumeroTextvalue, setNumeroTextValue] = useState('');
+    const [ComplementoTextvalue, setComplementoTextValue] = useState('');
+    const [QuaisServicosTextvalue, setQuaisServicosTextValue] = useState('');
+    const [DesdeQuandoTextvalue, setDesdeQuandoTextValue] = useState('');
+    // const [MostreSeuServicoTextvalue, setMostreSeuServicoTextValue] = useState('');
 
     const Click = () => {
         setStyles1((prevStyles) => ({
@@ -62,7 +78,81 @@ export const TelasCadastro: React.FC = () => {
             ...prevStyles,
             display: count !== 1 ? 'none' : 'flex'
         }));
-        setCount(count + 1);
+        setPerguntas4((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 2 ? 'none' : 'flex'
+        }));
+        setPerguntas5((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 3 ? 'none' : 'flex'
+        }));
+        setPerguntas6((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 4 ? 'none' : 'flex'
+        }));
+        if (count < 4) {
+            setCount(count + 1);
+        }
+    };
+
+    const ClickVolta = () => {
+        setStyles1((prevStyles) => ({
+            ...prevStyles,
+            display: count < 0 ? 'none' : 'flex',
+            backgroundColor:
+                count === 0 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
+        }));
+        setStyles2((prevStyles) => ({
+            ...prevStyles,
+            display: count < 1 ? 'none' : 'flex',
+            backgroundColor:
+                count === 1 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
+        }));
+        setStyles3((prevStyles) => ({
+            ...prevStyles,
+            display: count < 2 ? 'none' : 'flex',
+            backgroundColor:
+                count === 2 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
+        }));
+        setStyles4((prevStyles) => ({
+            ...prevStyles,
+            display: count < 3 ? 'none' : 'flex',
+            backgroundColor:
+                count === 3 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
+        }));
+        setStyles5((prevStyles) => ({
+            ...prevStyles,
+            display: count < 4 ? 'none' : 'flex',
+            backgroundColor:
+                count === 4 ? 'rgba(57, 44, 114, 1)' : 'rgba(148,148,148,1)'
+        }));
+        setPerguntas1((prevStyles) => ({
+            ...prevStyles,
+            display: count !== -1 ? 'none' : 'flex'
+        }));
+        setPerguntas2((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 0 ? 'none' : 'flex'
+        }));
+        setPerguntas3((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 1 ? 'none' : 'flex'
+        }));
+        setPerguntas4((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 2 ? 'none' : 'flex'
+        }));
+        setPerguntas5((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 3 ? 'none' : 'flex'
+        }));
+        setPerguntas6((prevStyles) => ({
+            ...prevStyles,
+            display: count !== 4 ? 'none' : 'flex'
+        }));
+        if (count > -1) {
+            setCount(count - 1);
+        }
     };
 
     const CPFInputChange = (e: {
@@ -93,6 +183,67 @@ export const TelasCadastro: React.FC = () => {
     };
     const OutroGeneroCheckBoxChange = () => {
         setGeneroValue('outrogenero');
+    };
+    const IdentificacaoCPFCheckBoxChange = () => {
+        setIdentificacaoValue('CPF');
+    };
+    const IdentificacaoCNPJCheckBoxChange = () => {
+        setIdentificacaoValue('CNPJ');
+    };
+    const IdentificacaotextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setIdentificacaoTextValue(e.target.value);
+    };
+    const ContatotextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setContatoTextValue(e.target.value);
+    };
+    const CEPtextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setCEPTextValue(e.target.value);
+    };
+    const EstadotextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setEstadoTextValue(e.target.value);
+    };
+    const CidadetextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setCidadeTextValue(e.target.value);
+    };
+    const BairrotextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setBairroTextValue(e.target.value);
+    };
+    const EnderecotextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setEnderecoTextValue(e.target.value);
+    };
+    const NumerotextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setNumeroTextValue(e.target.value);
+    };
+    const ComplementotextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setComplementoTextValue(e.target.value);
+    };
+    const QuaisServicostextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setQuaisServicosTextValue(e.target.value);
+    };
+    const DesdeQuandotextInputChange = (e: {
+        target: { value: React.SetStateAction<string> };
+    }) => {
+        setDesdeQuandoTextValue(e.target.value);
     };
 
     return (
@@ -190,8 +341,8 @@ export const TelasCadastro: React.FC = () => {
                         <S.IdentificacaoCheckBoxArea
                             style={perguntas3}
                             type="checkbox"
-                            checked={false}
-                            onChange={OutroGeneroCheckBoxChange}
+                            checked={Identificacaovalue === 'CPF'}
+                            onChange={IdentificacaoCPFCheckBoxChange}
                         />
                         <S.CheckBoxTexto style={perguntas3}>
                             CPF
@@ -199,20 +350,116 @@ export const TelasCadastro: React.FC = () => {
                         <S.IdentificacaoCheckBoxArea
                             style={perguntas3}
                             type="checkbox"
-                            checked={false}
-                            onChange={OutroGeneroCheckBoxChange}
+                            checked={Identificacaovalue === 'CNPJ'}
+                            onChange={IdentificacaoCNPJCheckBoxChange}
                         />
                         <S.CheckBoxTexto style={perguntas3}>
                             CNPJ
                         </S.CheckBoxTexto>
                     </S.DivIdentificacaoCheckBox>
                 </S.MainDivIdentificacaoCheckBox>
+                <S.IdentificacaoTextArea
+                    style={perguntas3}
+                    placeholder="Digite aqui"
+                    value={IdentificacaoTextvalue}
+                    onChange={IdentificacaotextInputChange}
+                />
 
                 {/* perguntas 4 */}
 
+                <S.ContatoTexto style={perguntas4}>
+                    Qual o seu contato?
+                </S.ContatoTexto>
+                <S.ContatoTextArea
+                    style={perguntas4}
+                    placeholder="Digite seu número de celular aqui"
+                    value={ContatoTextvalue}
+                    onChange={ContatotextInputChange}
+                    type="number"
+                />
+
                 {/* perguntas 5 */}
+
+                <S.EnderecoTexto style={perguntas5}>
+                    Qual seu endereço?
+                </S.EnderecoTexto>
+                <S.DivCEPEstado style={perguntas5}>
+                    <S.CEPTextArea
+                        style={perguntas5}
+                        placeholder="CEP"
+                        value={CEPTextvalue}
+                        onChange={CEPtextInputChange}
+                        type="number"
+                    />
+                    <S.EstadoTextArea
+                        style={perguntas5}
+                        placeholder="Estado"
+                        value={EstadoTextvalue}
+                        onChange={EstadotextInputChange}
+                    />
+                </S.DivCEPEstado>
+                <S.CidadeTextArea
+                    style={perguntas5}
+                    placeholder="Cidade"
+                    value={CidadeTextvalue}
+                    onChange={CidadetextInputChange}
+                />
+                <S.BairroTextArea
+                    style={perguntas5}
+                    placeholder="Bairro"
+                    value={BairroTextvalue}
+                    onChange={BairrotextInputChange}
+                />
+                <S.EnderecoTextArea
+                    style={perguntas5}
+                    placeholder="Endereco"
+                    value={EnderecoTextvalue}
+                    onChange={EnderecotextInputChange}
+                />
+                <S.DivNumeroComplemento style={perguntas5}>
+                    <S.NumeroTextArea
+                        style={perguntas5}
+                        placeholder="Número"
+                        value={NumeroTextvalue}
+                        onChange={NumerotextInputChange}
+                        type="number"
+                    />
+                    <S.ComplementoTextArea
+                        style={perguntas5}
+                        placeholder="Complemento"
+                        value={ComplementoTextvalue}
+                        onChange={ComplementotextInputChange}
+                    />
+                </S.DivNumeroComplemento>
+
+                {/* perguntas 6 */}
+
+                <S.EnderecoTexto style={perguntas6}>
+                    Fale mais sobre seus serviços
+                </S.EnderecoTexto>
+                <S.CidadeTextArea
+                    style={perguntas6}
+                    placeholder="Diga quais serviços você presta"
+                    value={QuaisServicosTextvalue}
+                    onChange={QuaisServicostextInputChange}
+                />
+                <S.BairroTextArea
+                    style={perguntas6}
+                    placeholder="Desde quando atua na área?"
+                    value={DesdeQuandoTextvalue}
+                    onChange={DesdeQuandotextInputChange}
+                />
+                <S.EnderecoTextArea
+                    style={perguntas6}
+                    placeholder="Mostre seus serviços"
+                    value={ContatoTextvalue}
+                    onChange={ContatotextInputChange}
+                />
             </S.Box1>
             <S.SetaProximoDiv>
+                <S.SetaVolta onClick={ClickVolta}>
+                    <S.Img4 src="/Downloads/Setacopia.png" alt="SetaCopia" />
+                </S.SetaVolta>
                 <S.SetaProximo onClick={Click}>
                     <S.Img3 src="/Downloads/Seta.png" alt="SetaProximo" />
                 </S.SetaProximo>

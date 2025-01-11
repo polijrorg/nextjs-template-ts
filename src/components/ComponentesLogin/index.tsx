@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-// import UserService from 'services/UserService';
+import UserService from 'services/UserService';
 import * as S from './styles';
 
 export const LoginBox: React.FC = () => {
@@ -18,18 +18,18 @@ export const LoginBox: React.FC = () => {
     }) => {
         setSenhaLogin(e.target.value);
     };
-    /* const Click = async () => {
+    const Click = async () => {
         try {
-            const Response = await UserService.Login({
+            await UserService.LoginUser({
                 cpf: CPFlogin,
                 password: Senhalogin
             });
             Router.push('/');
         } catch (error) {
-            console.log('CPF ou senha incorretos');
-            console.error(error);
+            // console.log('CPF ou senha incorretos');
+            // console.error(error);
         }
-    }; */
+    };
     return (
         <S.MainDiv>
             <S.MainImageDiv>
@@ -49,7 +49,7 @@ export const LoginBox: React.FC = () => {
                     onChange={SenhaInputChange}
                 />
                 <S.EsqueceuSenha>Esqueceu a senha?</S.EsqueceuSenha>
-                <S.Entrar>Entrar</S.Entrar>
+                <S.Entrar onClick={Click}>Entrar</S.Entrar>
                 <S.TextoCadastro>Não tem conta?</S.TextoCadastro>
                 <S.Cadastro
                     onClick={() => {
